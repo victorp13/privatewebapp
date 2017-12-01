@@ -13,11 +13,11 @@ In all honesty, this solution is a bit of a 'hack' because it makes use of routi
 
 Essentially we are going to set up:
 - a regular App Service; without fancy VNET integration
-- an App Gateway with both a public and a private UP
+- an App Gateway with both a public and a private IP
 - routing solely from that private IP to the App Service
 - finally whitelisting that public IP on the App Service
 
-This leads to the App Service being only accessible from the *private* ip address. Traffic flowing from the VNET to the App Service seems to be 'translated' to the public IP address (this is the funky bit) and hence be allowed access. And since there is no route from the public IP directly to the App Service; outside access is now blocked off.
+This leads to the App Service being only accessible from the *private* ip address. Traffic flowing from the VNET to the App Service is now 'translated' to the public IP address (this is the funky bit) and hence allowed access. And since there is no route from the public IP directly to the App Service; outside access is now blocked off.
 
 To put this into a diagram:
 
