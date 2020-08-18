@@ -1,4 +1,5 @@
 # Private Web App
+> :warning: **This solution will soon become unnecessary** since [Private Endpoints for Azure Web Apps](https://docs.microsoft.com/en-us/azure/app-service/networking/private-endpoint) will enable this natively.
 ## Introduction
 In certain situations you want to deploy a Web App that is shielded off from the internet and only accessible from resources inside a designated Virtual Network. For example; a VM needs access to an API hosted as a Web App, but internet traffic should not have access.
 
